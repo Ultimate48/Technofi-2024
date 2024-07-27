@@ -1,6 +1,42 @@
 import React from 'react'
 import Header from '../header'
 import competitionsImage from '../../assets/key/competitions.png'
+import { useNavigate } from 'react-router-dom';
+
+const navigate = useNavigate();
+
+const about = "Technofi is an annual technical festival organized by St. Peter's College. It is one of the largest technical festivals in India. The festival is a platform for students to showcase their technical prowess. With a variety of competitions and quizzes, the festival is a haven for tech enthusiasts. The festival also hosts a number of workshops and seminars that provide students with the opportunity to learn from experts in the field. Technofi aims to inspire and engage the next generation of technologists."
+
+  const headCoverStyles = 'flex h-[60px] px-4 pt-5 pb-3 flex-col self-stretch'
+
+  const headTextStyles = 'text-white font-dlig-on font-[Lexend] text-[22px] not-italic font-bold leading-7'
+
+  const highlights = [
+    { name: 'Great Competitions', imageUrl: competitionsImage },
+    { name: 'Exciting Workshops', imageUrl: competitionsImage },
+    { name: 'Inspiring Seminars', imageUrl: competitionsImage },
+    { name: 'Great Competitions', imageUrl: competitionsImage },
+  ]
+
+  const news = [
+    { name: 'Great Competitions', imageUrl: competitionsImage },
+    { name: 'Exciting Workshops', imageUrl: competitionsImage },
+    { name: 'Inspiring Seminars', imageUrl: competitionsImage },
+    { name: 'Great Competitions', imageUrl: competitionsImage },
+  ]
+
+  const sponsors = [
+    { imageUrl: competitionsImage },
+    { imageUrl: competitionsImage },
+    { imageUrl: competitionsImage },
+  ]
+
+  const FAQs = [
+    { question: "What are the dates of the event?", answer: "The event will be held from 1st to 3rd April 2024." },
+    { question: "How can I register for the event?", answer: "You can register for the event by visiting our website." },
+    { question: "Are there any registration fees?", answer: "No, the event is free for all." },
+    { question: "What are the prizes for the competitions?", answer: "The prizes for the competitions will be announced soon." },
+  ]
 
 const Highlight = ({key, name, imageUrl}) =>{
   return(
@@ -41,51 +77,11 @@ const FAQComp = ({question, answer}) => {
   )
 }
 
-export default function home() {
-
-  const about = "Technofi is an annual technical festival organized by St. Peter's College. It is one of the largest technical festivals in India. The festival is a platform for students to showcase their technical prowess. With a variety of competitions and quizzes, the festival is a haven for tech enthusiasts. The festival also hosts a number of workshops and seminars that provide students with the opportunity to learn from experts in the field. Technofi aims to inspire and engage the next generation of technologists."
-
-  const headCoverStyles = 'flex h-[60px] px-4 pt-5 pb-3 flex-col self-stretch'
-
-  const headTextStyles = 'text-white font-dlig-on font-[Lexend] text-[22px] not-italic font-bold leading-7'
-
-  const highlights = [
-    { name: 'Great Competitions', imageUrl: competitionsImage },
-    { name: 'Exciting Workshops', imageUrl: competitionsImage },
-    { name: 'Inspiring Seminars', imageUrl: competitionsImage },
-    { name: 'Great Competitions', imageUrl: competitionsImage },
-  ]
-
-  const news = [
-    { name: 'Great Competitions', imageUrl: competitionsImage },
-    { name: 'Exciting Workshops', imageUrl: competitionsImage },
-    { name: 'Inspiring Seminars', imageUrl: competitionsImage },
-    { name: 'Great Competitions', imageUrl: competitionsImage },
-  ]
-
-  const sponsors = [
-    { imageUrl: competitionsImage },
-    { imageUrl: competitionsImage },
-    { imageUrl: competitionsImage },
-  ]
-
-  const FAQs = [
-    { question: "What are the dates of the event?", answer: "The event will be held from 1st to 3rd April 2024." },
-    { question: "How can I register for the event?", answer: "You can register for the event by visiting our website." },
-    { question: "Are there any registration fees?", answer: "No, the event is free for all." },
-    { question: "What are the prizes for the competitions?", answer: "The prizes for the competitions will be announced soon." },
-  ]
-
-  return (
-    <>
-      {/* Header */}
-      <Header />
-      {/* Body */}
-      <body className='flex flex-col py-5 px-40 items-start flex-1 self-stretch bg-background h-fit'>
-        {/* Hero Section */}
-        <section className='w-full'>
+const Hero = () => {
+  return(
+  <section className='w-full'>
         <div className='flex flex-col items-start self-stretch h-fit p-4'>
-          <div className='flex h-[480px] min-h-[480px] pt-[170px] pb-[138px] pl-[169px] pr-[137px] flex-col justify-end items-center gap-4 self-stretch rounded-xl bg-hero-pattern bg-no-repeat bg-cover'>
+          <div className='flex h-[480px] min-h-[480px] pt-[170px] pb-[138px] pl-[169px] pr-[137px] flex-col justify-end items-center gap-4 self-stretch rounded-xl bg-hero-pattern bg-no-repeat bg-cover bg-bottom'>
             <div className='flex flex-col items-center gap-2 justify-center'>
               <div className='text-white text-center font-dlig-on font-[Lexend] text-5xl not-italic font-black leading-[60px] tracking-[-2px]'>
               Welcome to Technofi 2024
@@ -94,16 +90,20 @@ export default function home() {
               Where science meets technology
               </div>
             </div>
-            <button className='flex h-16 min-w-[84px] max-w-[480px] px-5 justify-center items-center rounded-xl shadow-lg bg-button transform hover:scale-105 transition-transform duration-200'>
+            <button className='flex h-16 min-w-[84px] max-w-[480px] px-5 justify-center items-center rounded-xl shadow-lg bg-button transform hover:scale-105 transition-transform duration-200' onClick={() => navigate('/about')}>
               <div className='flex items-center overflow-hidden text-white text-center font-dlig-on text-ellipsis font-[Lexend] text-[16px] not-italic font-bold leading-6'>
                 Know More
               </div>
             </button>
           </div>
         </div>
-        </section>
-        {/* About Section */}
-        <section>
+  </section>
+  )
+}
+
+const About = () => {
+  return(
+    <section>
         <div className={headCoverStyles}>
           <div className={headTextStyles}>About Technofi</div>
         </div>
@@ -113,8 +113,12 @@ export default function home() {
           </div>
         </div>
         </section>
-        {/* Highlights Section */}
-        <section>
+  )
+}
+
+const Highlights = () => {
+  return(
+    <section>
         <div className={headCoverStyles}>
           <div className={headTextStyles}>Key Highlights</div>
         </div>
@@ -124,8 +128,12 @@ export default function home() {
             ))}
         </div>
         </section>
-        {/* News Section */}
-        <section>
+  )
+}
+
+const NewSect = () => {
+  return(
+    <section>
         <div className={headCoverStyles}>
           <div className={headTextStyles}>News and Updates</div>
         </div>
@@ -135,8 +143,12 @@ export default function home() {
             ))}
         </div>
         </section>
-        {/* Sponsors Section */}
-        <section>
+  )
+}
+
+const Sponsors = () => {
+  return(
+    <section>
         <div className={headCoverStyles}>
           <div className={headTextStyles}>Our Sponsors</div>
         </div>
@@ -146,8 +158,12 @@ export default function home() {
             </>))}
         </div>
         </section>
-        {/* FAQs Section */}
-        <section className='w-full'>
+  )
+}
+
+const FAQSec = () => {
+  return(
+    <section className='w-full'>
         <div className={headCoverStyles}>
           <div className={headTextStyles}>FAQs</div>
         </div>
@@ -157,8 +173,12 @@ export default function home() {
             ))}
         </div>
         </section>
-        {/* Contact Section */}
-        <section className='w-full'>
+  )
+}
+
+const Contact = () => {
+  return(
+    <section className='w-full'>
         <div className={headCoverStyles}>
           <div className={headTextStyles}>Contact Us</div>
         </div>
@@ -220,13 +240,42 @@ export default function home() {
               </div>
             </div>
         </section>
+  )
+}
+
+const Body = () => {
+  return(
+    <body className='flex flex-col py-5 px-40 items-start flex-1 self-stretch bg-background h-fit'>
+        <Hero />
+        <About />
+        <Highlights />
+        <NewSect />
+        <Sponsors />
+        <FAQSec />
+        <Contact />
       </body>
-      {/* Footer */}
-      <footer className='flex h-20 bg-footerBg items-center justify-center p-4 bg-background'>
+  )
+}
+
+const Footer = () => {
+  return(
+    <footer className='flex h-20 bg-footerBg items-center justify-center p-4 bg-background'>
         <div className='text-white font-dlig-on font-[Lexend] text-base not-italic font-medium leading-6 flex items-center'>
             © 2024 Technofi. All rights reserved.
         </div>
       </footer>
+  )
+}
+export default function home() {
+
+  return (
+    <>
+      {/* Header */}
+      <Header />
+      {/* Body */}
+      <Body />
+      {/* Footer */}
+      <Footer />
     </>
   )
 }

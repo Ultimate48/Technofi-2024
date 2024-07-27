@@ -7,8 +7,14 @@ export default {
   theme: {
     extend: {
       backgroundImage:{
-        'hero-pattern': "url('/src/assets/hero-1.png')",
+        'hero-pattern': "url('/src/assets/heroImg/hero-1.png')",
+        'hero-pattern-2': "url('/src/assets/heroImg/hero-2.png')",
         'competitions': "url('/src/assets/key/competitions.png')",
+        'broch2016': "url('/src/assets/BrochureIMG/T2016.jpg')",
+        'broch2017': "url('/src/assets/BrochureIMG/T2017.jpg')",
+        'broch2018': "url('/src/assets/BrochureIMG/T2018.jpg')",
+        'broch2019': "url('/src/assets/BrochureIMG/T2019.jpg')",
+        'broch2022': "url('/src/assets/BrochureIMG/T2022.jpg')",
       },
       colors: {
         'borderColor': '#E5E8EB',
