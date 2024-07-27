@@ -3,7 +3,7 @@ import Header from '../header'
 import competitionsImage from '../../assets/key/competitions.png'
 import { useNavigate } from 'react-router-dom';
 
-const navigate = useNavigate();
+
 
 const about = "Technofi is an annual technical festival organized by St. Peter's College. It is one of the largest technical festivals in India. The festival is a platform for students to showcase their technical prowess. With a variety of competitions and quizzes, the festival is a haven for tech enthusiasts. The festival also hosts a number of workshops and seminars that provide students with the opportunity to learn from experts in the field. Technofi aims to inspire and engage the next generation of technologists."
 
@@ -78,6 +78,9 @@ const FAQComp = ({question, answer}) => {
 }
 
 const Hero = () => {
+
+  const navigate = useNavigate();
+
   return(
   <section className='w-full'>
         <div className='flex flex-col items-start self-stretch h-fit p-4'>
@@ -266,7 +269,7 @@ const Footer = () => {
       </footer>
   )
 }
-export default function home() {
+export default function Home() {
 
   return (
     <>
