@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../header'
-import { useEffect, useState } from 'react';
+import Footer from '../footer'
 
 const overview = 'Technofi is an annual tech fest organized by the students of St. Peter\'s College, Agra. It is a platform for students to showcase their talents and innovations in technology. Technofi was born out of the passion of a few students who wanted to create a space for their peers to explore technology and its potential. Over the years, it has evolved into a vibrant community of tech enthusiasts.'
 
@@ -69,23 +69,23 @@ const History = () => {
                         {history}
                     </div>
                 </div>
-                <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5 gap-10 mt-5 p-4'>
-                <div className='bg-center flex flex-col rounded-xl justify-end p-4 bg-broch2016 bg-contain bg-no-repeat transform hover:scale-105 transition-transform duration-200 cursor-pointer' style={{ aspectRatio: '724 / 1024'}}>
-            <p className="text-white text-base font-bold leading-tight w-4/5 line-clamp-2 flex items-end">Technofi 2016</p>
+        <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5 gap-10 mt-5 p-4'>
+            <div className='bg-center flex flex-col rounded-xl justify-end p-4 bg-broch2016 bg-contain bg-no-repeat transform hover:scale-105 transition-transform duration-200 cursor-pointer' style={{ aspectRatio: '724 / 1024'}}>
+                <p className="text-white text-base font-bold leading-tight w-4/5 line-clamp-2 flex items-end">Technofi 2016</p>
+            </div>
+            <div className='bg-center flex flex-col rounded-xl justify-end p-4 bg-broch2017 bg-contain bg-no-repeat transform hover:scale-105 transition-transform duration-200 cursor-pointer' style={{ aspectRatio: '724 / 1024'}}>
+                <p className="text-white text-base font-bold leading-tight w-4/5 line-clamp-2 flex items-end">Technofi 2017</p>
+            </div>
+            <div className='bg-center flex flex-col rounded-xl justify-end p-4 bg-broch2018 bg-contain bg-no-repeat transform hover:scale-105 transition-transform duration-200 cursor-pointer' style={{ aspectRatio: '724 / 1024'}}>
+                <p className="text-white text-base font-bold leading-tight w-4/5 line-clamp-2 flex items-end">Technofi 2018</p>
+            </div>
+            <div className='bg-center flex flex-col rounded-xl justify-end p-4 bg-broch2019 bg-contain bg-no-repeat transform hover:scale-105 transition-transform duration-200 cursor-pointer' style={{ aspectRatio: '724 / 1024'}}>
+                <p className="text-white text-base font-bold leading-tight w-4/5 line-clamp-2 flex items-end">Technofi 2019</p>
+            </div>
+            <div className='bg-center flex flex-col rounded-xl justify-end p-4 bg-broch2022 bg-contain bg-no-repeat transform hover:scale-105 transition-transform duration-200 cursor-pointer' style={{ aspectRatio: '724 / 1024'}}>
+                <p className="text-white text-base font-bold leading-tight w-4/5 line-clamp-2 flex items-end">Technofi 2022</p>
+            </div>
         </div>
-        <div className='bg-center flex flex-col rounded-xl justify-end p-4 bg-broch2017 bg-contain bg-no-repeat transform hover:scale-105 transition-transform duration-200 cursor-pointer' style={{ aspectRatio: '724 / 1024'}}>
-            <p className="text-white text-base font-bold leading-tight w-4/5 line-clamp-2 flex items-end">Technofi 2017</p>
-        </div>
-        <div className='bg-center flex flex-col rounded-xl justify-end p-4 bg-broch2018 bg-contain bg-no-repeat transform hover:scale-105 transition-transform duration-200 cursor-pointer' style={{ aspectRatio: '724 / 1024'}}>
-            <p className="text-white text-base font-bold leading-tight w-4/5 line-clamp-2 flex items-end">Technofi 2018</p>
-        </div>
-        <div className='bg-center flex flex-col rounded-xl justify-end p-4 bg-broch2019 bg-contain bg-no-repeat transform hover:scale-105 transition-transform duration-200 cursor-pointer' style={{ aspectRatio: '724 / 1024'}}>
-            <p className="text-white text-base font-bold leading-tight w-4/5 line-clamp-2 flex items-end">Technofi 2019</p>
-        </div>
-        <div className='bg-center flex flex-col rounded-xl justify-end p-4 bg-broch2022 bg-contain bg-no-repeat transform hover:scale-105 transition-transform duration-200 cursor-pointer' style={{ aspectRatio: '724 / 1024'}}>
-            <p className="text-white text-base font-bold leading-tight w-4/5 line-clamp-2 flex items-end">Technofi 2022</p>
-        </div>
-                </div>
             </section>
     )
 }
@@ -223,16 +223,6 @@ const Body = () => {
         </body>
     )
 }
-
-const Footer = () => {
-    return(
-      <footer className='flex h-20 bg-footerBg items-center justify-center p-4 bg-background'>
-          <div className='text-white font-dlig-on font-[Lexend] text-base not-italic font-medium leading-6 flex items-center'>
-              © 2024 Technofi. All rights reserved.
-          </div>
-        </footer>
-    )
-  }
 
 export default function About() {
 

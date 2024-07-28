@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../header'
 import competitionsImage from '../../assets/key/competitions.png'
 import { useNavigate } from 'react-router-dom';
+import Footer from '../footer';
 
 
 
@@ -260,15 +261,6 @@ const Body = () => {
   )
 }
 
-const Footer = () => {
-  return(
-    <footer className='flex h-20 bg-footerBg items-center justify-center p-4 bg-background'>
-        <div className='text-white font-dlig-on font-[Lexend] text-base not-italic font-medium leading-6 flex items-center'>
-            © 2024 Technofi. All rights reserved.
-        </div>
-      </footer>
-  )
-}
 export default function Home() {
 
   return (
