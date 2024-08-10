@@ -21,7 +21,7 @@ export default function Header() {
         <div className='flex h-10 items-center gap-9'>
           <div className={linkStlyes} onClick={() => navigate('/home')}>Home</div>
           <div className={linkStlyes} onClick={() => navigate('/about')}>About</div>
-          <div className={linkStlyes}>Events</div>
+          <div className={linkStlyes} onClick={() => navigate('/events')}>Events</div>
           <div className={linkStlyes}>Gallery</div>
           <button className='flex h-10 min-w-[84px] max-w-[480px] px-4 justify-center items-center rounded-xl bg-button transform hover:scale-105 transition-transform duration-200 shadow-lg'>
           <div className="flex-col justify-start items-center inline-flex">

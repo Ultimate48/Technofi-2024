@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from '../header'
 import Footer from '../footer'
+import { useNavigate } from 'react-router-dom';
 
 const overview = 'Technofi is an annual tech fest organized by the students of St. Peter\'s College, Agra. It is a platform for students to showcase their talents and innovations in technology. Technofi was born out of the passion of a few students who wanted to create a space for their peers to explore technology and its potential. Over the years, it has evolved into a vibrant community of tech enthusiasts.'
 
@@ -20,6 +21,9 @@ const paraTextStyles = 'text-white text-[16px] font-dlig-on font-[Lexend] leadin
 
  
 const Hero = () => {
+
+    const navigate = useNavigate();
+
     return(
         <section className='w-full'>
         <div className='flex flex-col items-start self-stretch h-fit p-4'>
@@ -32,7 +36,7 @@ const Hero = () => {
               Where science meets technology
               </div>
             </div>
-            <button className='flex h-16 min-w-[84px] max-w-[480px] px-5 justify-center items-center rounded-xl shadow-lg bg-button transform hover:scale-105 transition-transform duration-200'>
+            <button className='flex h-16 min-w-[84px] max-w-[480px] px-5 justify-center items-center rounded-xl shadow-lg bg-button transform hover:scale-105 transition-transform duration-200' onClick={() => navigate('/events')}>
               <div className='flex items-center overflow-hidden text-white text-center font-dlig-on text-ellipsis font-[Lexend] text-[16px] not-italic font-bold leading-6'>
                 View event details
               </div>
