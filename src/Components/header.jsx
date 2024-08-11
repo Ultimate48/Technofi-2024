@@ -4,33 +4,37 @@ import { useNavigate } from 'react-router-dom';
 
 export default function Header() {
 
-  const navigate = useNavigate();
-
-  const linkStlyes = 'text-white font-[Lexend] font-dlig-on text-[14px] not-italic font-medium leading-[21px] flex items-center self-stretch transform hover:scale-105 transition-transform duration-200 cursor-pointer'
+    const linkStyle = 'flex text-center font-Inter text-base font-medium leading-5 tracking-[0.16px] justify-center items-center text-white'
 
   return (
-    <>
-    <header className='flex py-3 px-10 justify-between items-center self-stretch border-b border-solid border-borderColor bg-background h-[65px]'>
-      <div className='flex items-center gap-2 cursor-pointer' onClick={() => navigate('/')}>
-        <img src='./src/assets/logo.svg' alt='logo' className='w-4 flex-1 items-center' />
-        <div className='self-stretch text-white font-[Lexend] font-dlig-on text-[18px] not-italic font-bold leading-[23px] flex items-center'>
-          Technofi
-        </div>
-      </div>
-      <div className='flex justify-end items-start gap-8 flex-1'>
-        <div className='flex h-10 items-center gap-9'>
-          <div className={linkStlyes} onClick={() => navigate('/home')}>Home</div>
-          <div className={linkStlyes} onClick={() => navigate('/about')}>About</div>
-          <div className={linkStlyes} onClick={() => navigate('/events')}>Events</div>
-          <div className={linkStlyes}>Gallery</div>
-          <button className='flex h-10 min-w-[84px] max-w-[480px] px-4 justify-center items-center rounded-xl bg-button transform hover:scale-105 transition-transform duration-200 shadow-lg'>
-          <div className="flex-col justify-start items-center inline-flex">
-            <div className="flex items-center text-white text-sm font-bold font-[Lexend] leading-[21px]">Register</div>
-          </div>
-          </button>
-        </div>
-      </div>
-    </header>
-    </>
+    <div className='flex w-full h-[80px] py-5 px-20 items-center fixed top-0 bg-opacity-50 backdrop-blur-md z-10'>
+            <div className='flex justify-between items-center w-full h-fit'>
+                <div className='flex items-center w-fit'>
+                <div className='flex pr-2 flex-col items-start'>
+                <img src='./src/assets/logo.svg' alt='logo' className='h-4 flex-1 items-center' />
+                </div>
+                <div className='flex flex-col items-center justify-center text-center font-bold text-lg text-white w-fit'>
+                    Technofi 2024
+                </div>
+                </div>
+                <div className='flex justify-center items-center gap-40 flex-1 ml-40'>
+                        <div className={linkStyle}>
+                            HOME
+                        </div>
+                        <div className={linkStyle}>
+                            HISTORY
+                        </div>
+                        <div className={linkStyle}>
+                            EVENTS
+                        </div>
+                        <div className={linkStyle}>
+                            GALLERY
+                        </div>
+                        <div className='flex w-24 h-10 flex-col justify-center items-center border rounded bg-yellow-orange shadow-custom'>
+                            Register
+                        </div>
+                </div>
+            </div>
+    </div>
   )
 }
